@@ -1,0 +1,4 @@
+#Wed Jun 01 19:17:34 IST 2022
+base.0=/Users/anavadya/Documents/Karthik/Flutter/Assignment/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
