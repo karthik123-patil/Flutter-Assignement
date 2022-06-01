@@ -45,6 +45,7 @@ class _UserListScreenState extends State<UserListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    getUserList();
     return Scaffold(
       appBar: AppBar(
         shape: const RoundedRectangleBorder(
@@ -65,141 +66,143 @@ class _UserListScreenState extends State<UserListScreen> {
               letterSpacing: 0.2),
         ),
       ),
-      body: ListView.builder(
-          shrinkWrap: true,
-          physics: const BouncingScrollPhysics(),
-          itemCount: myModels.length,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
+      body: SingleChildScrollView(
+        child: ListView.builder(
+            shrinkWrap: true,
+            physics: const BouncingScrollPhysics(),
+            itemCount: myModels.length,
+            itemBuilder: (context, index) {
+              return Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "assets/images/img_assignment.jpeg",
+                                  width: 50,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  myModels[index].name.toString(),
+                                  style: const TextStyle(
+                                      color: AppColors.primaryColor,
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: "Poppins",
+                                      fontSize: 12,
+                                      letterSpacing: 0.2),
+                                ),
+                                Text(
+                                  myModels[index].email.toString(),
+                                  style: const TextStyle(
+                                      color: AppColors.primaryColor,
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: "Poppins",
+                                      fontSize: 10,
+                                      letterSpacing: 0.2),
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/img_drop.png",
+                                      color: AppColors.iconDarkColor,
+                                      scale: 2,
+                                    ),
+                                    const SizedBox(width: 5,),
+                                    Text(
+                                      myModels[index].address!.street.toString() + "," + myModels[index].address!.suite.toString() + ",\n" +myModels[index].address!.city.toString() + "-" + myModels[index].address!.zipcode.toString(),
+                                      maxLines: 2,
+                                      style: const TextStyle(
+                                          color: AppColors.primaryColor,
+                                          fontStyle: FontStyle.normal,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: "Poppins",
+                                          fontSize: 10,
+                                          letterSpacing: 0.2),
+                                    ),
+                                  ],
+                                ),
+
+
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              Image.asset(
-                                "assets/images/img_assignment.jpeg",
-                                width: 50,
-                              ),
-                            ],
+                      const SizedBox(width: 5,),
+                      ElevatedButton(
+                        onPressed: () async{
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> PostByUserScreen(userId: myModels[index].id.toString())));
+                        },
+                        style: ButtonStyle(
+                          foregroundColor: MaterialStateProperty.all<Color>(AppColors.primaryColor),
+                          backgroundColor: MaterialStateProperty.all<Color>(AppColors.whiteColor),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  side:const BorderSide(color: AppColors.whiteColor)
+                              )
                           ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                myModels[index].name.toString(),
-                                style: const TextStyle(
-                                    color: AppColors.primaryColor,
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: "Poppins",
-                                    fontSize: 12,
-                                    letterSpacing: 0.2),
-                              ),
-                              Text(
-                                myModels[index].email.toString(),
-                                style: const TextStyle(
-                                    color: AppColors.primaryColor,
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Poppins",
-                                    fontSize: 10,
-                                    letterSpacing: 0.2),
-                              ),
-                              Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/images/img_drop.png",
-                                    color: AppColors.iconDarkColor,
-                                    scale: 2,
-                                  ),
-                                  const SizedBox(width: 5,),
-                                  Text(
-                                    myModels[index].address!.street.toString() + "," + myModels[index].address!.suite.toString() + ",\n" +myModels[index].address!.city.toString() + "-" + myModels[index].address!.zipcode.toString(),
-                                    maxLines: 2,
-                                    style: const TextStyle(
-                                        color: AppColors.primaryColor,
-                                        fontStyle: FontStyle.normal,
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: "Poppins",
-                                        fontSize: 10,
-                                        letterSpacing: 0.2),
-                                  ),
-                                ],
-                              ),
-
-
-                            ],
-                          ),
-                        ],
+                        ),
+                        child: const Text("Post", style: TextStyle(color:AppColors.primaryColor,fontSize: 14, fontWeight: FontWeight.w500,letterSpacing: 1, fontFamily: "poppinsNormal")),
                       ),
+                      ElevatedButton(
+                        onPressed: () async{
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AlbumsScreen(userId: myModels[index].id.toString())));
+                        },
+                        style: ButtonStyle(
+                          foregroundColor: MaterialStateProperty.all<Color>(AppColors.primaryColor),
+                          backgroundColor: MaterialStateProperty.all<Color>(AppColors.whiteColor),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  side:const BorderSide(color: AppColors.whiteColor)
+                              )
+                          ),
+                        ),
+                        child: const Text("Album", style: TextStyle(color:AppColors.primaryColor,fontSize: 14, fontWeight: FontWeight.w500,letterSpacing: 1, fontFamily: "poppinsNormal")),
+                      ),
+                      ElevatedButton(
+                        onPressed: () async{
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> UserToDosScreen(userId: myModels[index].id.toString())));
+                        },
+                        style: ButtonStyle(
+                          foregroundColor: MaterialStateProperty.all<Color>(AppColors.primaryColor),
+                          backgroundColor: MaterialStateProperty.all<Color>(AppColors.whiteColor),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  side:const BorderSide(color: AppColors.whiteColor)
+                              )
+                          ),
+                        ),
+                        child: const Text("To-Dos", style: TextStyle(color:AppColors.primaryColor,fontSize: 14, fontWeight: FontWeight.w500,letterSpacing: 1, fontFamily: "poppinsNormal")),
+                      ),
+                      const SizedBox(width: 5,),
                     ],
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const SizedBox(width: 5,),
-                    ElevatedButton(
-                      onPressed: () async{
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> PostByUserScreen(userId: myModels[index].id.toString())));
-                      },
-                      style: ButtonStyle(
-                        foregroundColor: MaterialStateProperty.all<Color>(AppColors.primaryColor),
-                        backgroundColor: MaterialStateProperty.all<Color>(AppColors.whiteColor),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                side:const BorderSide(color: AppColors.whiteColor)
-                            )
-                        ),
-                      ),
-                      child: const Text("Post", style: TextStyle(color:AppColors.primaryColor,fontSize: 14, fontWeight: FontWeight.w500,letterSpacing: 1, fontFamily: "poppinsNormal")),
-                    ),
-                    ElevatedButton(
-                      onPressed: () async{
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AlbumsScreen(userId: myModels[index].id.toString())));
-                      },
-                      style: ButtonStyle(
-                        foregroundColor: MaterialStateProperty.all<Color>(AppColors.primaryColor),
-                        backgroundColor: MaterialStateProperty.all<Color>(AppColors.whiteColor),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                side:const BorderSide(color: AppColors.whiteColor)
-                            )
-                        ),
-                      ),
-                      child: const Text("Album", style: TextStyle(color:AppColors.primaryColor,fontSize: 14, fontWeight: FontWeight.w500,letterSpacing: 1, fontFamily: "poppinsNormal")),
-                    ),
-                    ElevatedButton(
-                      onPressed: () async{
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> UserToDosScreen(userId: myModels[index].id.toString())));
-                      },
-                      style: ButtonStyle(
-                        foregroundColor: MaterialStateProperty.all<Color>(AppColors.primaryColor),
-                        backgroundColor: MaterialStateProperty.all<Color>(AppColors.whiteColor),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                side:const BorderSide(color: AppColors.whiteColor)
-                            )
-                        ),
-                      ),
-                      child: const Text("To-Dos", style: TextStyle(color:AppColors.primaryColor,fontSize: 14, fontWeight: FontWeight.w500,letterSpacing: 1, fontFamily: "poppinsNormal")),
-                    ),
-                    const SizedBox(width: 5,),
-                  ],
-                ),
-                const Divider(
-                  color: AppColors.primaryColor,
-                ),
-              ],
-            );
-          }),
+                  const Divider(
+                    color: AppColors.primaryColor,
+                  ),
+                ],
+              );
+            }),
+      ),
     );
   }
 }

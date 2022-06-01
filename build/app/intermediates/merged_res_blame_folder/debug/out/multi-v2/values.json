@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/anavadya/Documents/Karthik/Flutter/Assignment/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/anavadya/Documents/GitHub/assigment/Flutter-Assignement/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/anavadya/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/res/values/values.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/anavadya/Documents/Karthik/Flutter/Assignment/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/anavadya/Documents/GitHub/assigment/Flutter-Assignement/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

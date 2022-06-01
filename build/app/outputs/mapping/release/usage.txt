@@ -720,8 +720,8 @@ kotlin.TypeAliasesKt
 kotlin.reflect.KProperty$Accessor
 androidx.core.app.NotificationCompat$BubbleMetadata$Builder
 kotlinx.coroutines.DefaultExecutorKt
-kotlinx.coroutines.flow.StateFlowImpl$collect$1
 kotlinx.coroutines.channels.BroadcastKt$broadcast$1
+kotlinx.coroutines.flow.StateFlowImpl$collect$1
 kotlin.reflect.KMutableProperty0$Setter
 kotlinx.coroutines.CoroutineContextKt:
     public static final boolean getUseCoroutinesScheduler()
@@ -1170,6 +1170,7 @@ kotlinx.coroutines.flow.FlowKt__LimitKt$collectWhile$collector$1$emit$1
 androidx.core.content.res.ResourcesCompat$ThemeCompat$ImplApi23
 androidx.lifecycle.AndroidViewModel
 kotlin.collections.builders.MapBuilderEntries
+androidx.multidex.MultiDexExtractor$1
 androidx.loader.app.LoaderManagerImpl$LoaderViewModel
 androidx.core.app.NotificationBuilderWithBuilderAccessor
 kotlinx.coroutines.sync.MutexImpl$LockSelect
@@ -1263,6 +1264,7 @@ kotlin.ranges.ULongProgression$Companion
 kotlin.InitializedLazyImpl
 kotlin.time.MonotonicTimeSource
 androidx.core.app.JobIntentService$CommandProcessor
+androidx.multidex.MultiDex$V4
 kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1
 androidx.core.view.inputmethod.InputContentInfoCompat$InputContentInfoCompatImpl
 kotlinx.coroutines.CoroutineExceptionHandlerKt:
@@ -1303,8 +1305,8 @@ androidx.core.graphics.TypefaceCompatBaseImpl
 androidx.core.view.ViewCompat$NestedScrollType
 androidx.core.telephony.TelephonyManagerCompat$Api23Impl
 kotlinx.coroutines.flow.FlowKt__DistinctKt$defaultKeySelector$1
-kotlinx.coroutines.flow.SharedFlowImpl$WhenMappings
 kotlinx.coroutines.AwaitAll$AwaitAllNode
+kotlinx.coroutines.flow.SharedFlowImpl$WhenMappings
 kotlinx.coroutines.flow.FlowKt__TransformKt$mapNotNull$$inlined$unsafeTransform$1$1
 kotlinx.coroutines.flow.FlowKt__ZipKt$combineUnsafe$1$1
 androidx.fragment.app.FragmentManagerImpl$1
@@ -2960,6 +2962,7 @@ kotlin.collections.ArraysKt___ArraysKt:
     public static final double sum(double[])
     public void <init>()
 androidx.fragment.app.FragmentContainer
+androidx.multidex.MultiDex$V14
 android.support.v4.os.ResultReceiver
 androidx.core.app.JobIntentService$JobWorkEnqueuer
 androidx.arch.core.R
@@ -4022,6 +4025,7 @@ androidx.core.content.FileProvider$SimplePathStrategy
 kotlin.collections.ArraysKt___ArraysKt$asSequence$$inlined$Sequence$3
 androidx.core.app.AppOpsManagerCompat
 androidx.core.app.Person$Builder
+androidx.multidex.R
 androidx.core.view.WindowCompat$Impl30
 kotlinx.coroutines.intrinsics.CancellableKt:
     public static final void startCoroutineCancellable(kotlin.jvm.functions.Function1,kotlin.coroutines.Continuation)
@@ -4151,6 +4155,7 @@ kotlin.ExceptionsKt:
     private void <init>()
 androidx.core.net.ConnectivityManagerCompat$RestrictBackgroundStatus
 kotlin.text.Regex$splitToSequence$1
+androidx.multidex.ZipUtil$CentralDirectory
 kotlin.time.DurationUnitKt
 androidx.versionedparcelable.VersionedParcelize
 androidx.fragment.app.FragmentTransitionCompat21$3
@@ -4293,6 +4298,7 @@ androidx.core.provider.CallbackWithHandler$2
 kotlin.text.ScreenFloatValueRegEx
 androidx.customview.R$layout
 kotlin.coroutines.CombinedContext$Serialized$Companion
+androidx.multidex.MultiDex
 androidx.core.view.ContentInfoCompat$Builder
 kotlinx.coroutines.flow.FlowKt__EmittersKt$onEmpty$$inlined$unsafeFlow$1$1
 kotlinx.coroutines.debug.internal.ConcurrentWeakMap
@@ -4483,6 +4489,7 @@ io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager:
     public abstract void loadAssets(int,java.lang.String)
     public abstract void loadDartLibrary(int,java.lang.String)
 kotlinx.coroutines.flow.internal.ChannelLimitedFlowMerge
+androidx.multidex.MultiDexApplication
 androidx.customview.widget.FocusStrategy$BoundsAdapter
 kotlinx.coroutines.flow.ThrowingCollector
 kotlin.sequences.FilteringSequence$iterator$1
@@ -5065,6 +5072,7 @@ kotlin.UNumbersKt
 kotlin.sequences.TakeWhileSequence
 androidx.core.telephony.mbms.MbmsHelper
 kotlinx.coroutines.flow.FlowKt__ReduceKt$first$1
+androidx.multidex.MultiDex$V14$JBMR11ElementConstructor
 kotlinx.coroutines.flow.internal.AbstractSharedFlowKt
 androidx.fragment.app.FragmentManagerImpl$FragmentLifecycleCallbacksHolder
 androidx.lifecycle.LiveData$ObserverWrapper:
@@ -5568,6 +5576,7 @@ kotlinx.coroutines.ResumeOnCompletion
 kotlinx.coroutines.flow.FlowKt__MergeKt
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$elementAt$1
 kotlinx.coroutines.channels.ConflatedBroadcastChannel$Closed
+androidx.multidex.BuildConfig
 kotlin.jvm.internal.IntCompanionObject
 androidx.core.view.WindowInsetsCompat$Impl
 io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutator:
@@ -5992,6 +6001,7 @@ io.flutter.embedding.engine.loader.ResourceExtractor:
     private static final java.lang.String[] SUPPORTED_ABIS
 kotlinx.coroutines.EventLoopKt:
     public static final long processNextEventInCurrentThread()
+androidx.multidex.MultiDexExtractor$ExtractedDex
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$compareByDescending$1
 io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry$ShimRegistrarAggregate
 kotlinx.coroutines.selects.SelectBuilder
@@ -6009,6 +6019,7 @@ kotlinx.coroutines.flow.SharedFlowImpl$Emitter
 io.flutter.app.FlutterFragmentActivity
 kotlinx.coroutines.CancellableContinuation$DefaultImpls:
     public static synthetic boolean cancel$default(kotlinx.coroutines.CancellableContinuation,java.lang.Throwable,int,java.lang.Object)
+androidx.multidex.MultiDex$V19
 kotlinx.coroutines.flow.FlowKt__LimitKt$transformWhile$1$invokeSuspend$$inlined$collectWhile$1$1
 kotlin.collections.MutableMapWithDefault
 androidx.core.view.DisplayCutoutCompat
@@ -6335,8 +6346,8 @@ kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$
 kotlinx.coroutines.flow.FlowKt__TransformKt$map$$inlined$unsafeTransform$1$2
 kotlin.collections.AbstractList
 io.flutter.embedding.android.FlutterFragment$NewEngineFragmentBuilder
-kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$filterNotNullTo$3
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$zip$2
+kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$filterNotNullTo$3
 io.flutter.plugin.common.PluginRegistry$PluginRegistrantCallback
 kotlin.collections.AbstractMutableSet
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat
@@ -6503,6 +6514,7 @@ kotlin.annotation.AnnotationRetention
 androidx.core.view.KeyEventDispatcher
 kotlin.collections.MapsKt:
     private void <init>()
+androidx.multidex.MultiDex$V14$ElementConstructor
 kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$6$1
 io.flutter.BuildConfig
 androidx.core.content.res.TypedArrayUtils
@@ -6523,8 +6535,8 @@ kotlin.text.MatchResult$Destructured
 androidx.core.view.TintableBackgroundView
 androidx.core.app.NotificationChannelCompat
 androidx.core.app.ActivityCompat$RequestPermissionsRequestCodeValidator
-kotlinx.coroutines.test.TestCoroutineContext
 kotlinx.coroutines.Delay
+kotlinx.coroutines.test.TestCoroutineContext
 androidx.customview.widget.FocusStrategy$SequentialComparator
 androidx.core.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi19
 kotlinx.coroutines.channels.ChannelIterator:
@@ -7067,8 +7079,6 @@ androidx.core.content.ContextCompat:
 androidx.annotation.Dimension
 androidx.core.widget.EdgeEffectCompat
 androidx.core.view.accessibility.AccessibilityViewCommand$SetSelectionArguments
-kotlin.CharCodeJVMKt
-kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$map$1
 kotlinx.coroutines.intrinsics.UndispatchedKt:
     public static final void startCoroutineUnintercepted(kotlin.jvm.functions.Function1,kotlin.coroutines.Continuation)
     public static final void startCoroutineUnintercepted(kotlin.jvm.functions.Function2,java.lang.Object,kotlin.coroutines.Continuation)
@@ -7077,6 +7087,8 @@ kotlinx.coroutines.intrinsics.UndispatchedKt:
     public static final java.lang.Object startUndispatchedOrReturn(kotlinx.coroutines.internal.ScopeCoroutine,java.lang.Object,kotlin.jvm.functions.Function2)
     public static final java.lang.Object startUndispatchedOrReturnIgnoreTimeout(kotlinx.coroutines.internal.ScopeCoroutine,java.lang.Object,kotlin.jvm.functions.Function2)
     private static final java.lang.Object undispatchedResult(kotlinx.coroutines.internal.ScopeCoroutine,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function0)
+kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$map$1
+kotlin.CharCodeJVMKt
 kotlinx.coroutines.channels.AbstractChannel:
     private final java.lang.Object receiveSuspend(int,kotlin.coroutines.Continuation)
     private final void registerSelectReceiveMode(kotlinx.coroutines.selects.SelectInstance,int,kotlin.jvm.functions.Function2)
@@ -7104,6 +7116,7 @@ kotlinx.coroutines.channels.AbstractChannel:
     public java.lang.Object poll()
     public kotlinx.coroutines.selects.SelectClause1 getOnReceiveOrNull()
     public java.lang.Object receiveOrNull(kotlin.coroutines.Continuation)
+androidx.multidex.MultiDex$V14$JBMR2ElementConstructor
 kotlin.collections.unsigned.UArraysKt___UArraysKt$withIndex$2
 kotlinx.coroutines.sync.MutexKt
 kotlin.jvm.internal.ArrayBooleanIterator
@@ -7260,6 +7273,7 @@ kotlinx.coroutines.EventLoop_commonKt:
     private static final long MAX_MS
     private static final long MAX_DELAY_NS
 kotlinx.coroutines.channels.AbstractChannel$ReceiveElement
+androidx.multidex.MultiDexExtractor
 kotlinx.coroutines.flow.FlowKt__LimitKt$dropWhile$$inlined$unsafeFlow$1
 kotlinx.coroutines.flow.FlowKt__LimitKt$collectWhile$collector$1
 androidx.annotation.StringRes
@@ -7281,6 +7295,7 @@ androidx.core.view.accessibility.AccessibilityManagerCompat$AccessibilityStateCh
 io.flutter.embedding.engine.systemchannels.LocalizationChannel:
     private static final java.lang.String TAG
 androidx.core.app.JobIntentService$WorkEnqueuer
+androidx.multidex.MultiDex$V14$ICSElementConstructor
 kotlin.sequences.SequencesKt__SequenceBuilderKt:
     public static final kotlin.sequences.Sequence sequence(kotlin.jvm.functions.Function2)
     private static final kotlin.sequences.Sequence buildSequence(kotlin.jvm.functions.Function2)
@@ -7533,6 +7548,7 @@ kotlinx.coroutines.CompletedContinuation:
     public final kotlin.jvm.functions.Function1 component3()
     public final java.lang.Object component4()
     public final java.lang.Throwable component5()
+androidx.multidex.ZipUtil
 kotlin.jvm.functions.Function13:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
 kotlin.jvm.internal.CharCompanionObject
